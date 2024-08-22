@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import Alert from './components/Alert';
 import Button from './components/Button';
+import Like from './components/Like';
 
 function App() {
   const [alertVisable, setAlertVisability] = useState(false);
+  
   return (
     <div>
-      {alertVisable && <Alert>DANGER</Alert>}
+      {alertVisable && <Alert onClose={() => setAlertVisability(false)}>DANGER</Alert>}
       <Button color='danger' onClick={() => setAlertVisability(true)}>
         yeah
       </Button>
-      <Button color='secondary' onClick={() => console.log('clicked')}>timmy</Button>
+      <Like onClick={() => console.log('You liked it')
+      }/>
     </div>
   );
 }
