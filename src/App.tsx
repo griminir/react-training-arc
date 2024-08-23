@@ -1,8 +1,9 @@
 import ExpandableText from './components/ExpandableText';
+import Form from './components/Form';
 function App() {
   return (
     <div>
-      <ExpandableText maxChars={35}>hello world</ExpandableText>
+      <Form/>
     </div>
   );
 }
